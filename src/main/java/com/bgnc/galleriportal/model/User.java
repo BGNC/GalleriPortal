@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotEmpty;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,8 +14,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-import static jakarta.persistence.GenerationType.IDENTITY;
 
+
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
 @Table(name = "user")

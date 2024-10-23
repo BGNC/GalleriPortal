@@ -9,8 +9,12 @@ public enum MessageType {
 
     NO_RECORD_EXISTS("1001","The record is not found"),
     USERNAME_NOT_FOUND_EXCEPTION("1002","Username not found"),
-    TOKEN_IS_EXPIRED("1003","The token is expired"),
-    GENERAL_EXCEPTION("1002","The general error.");
+    USERNAME_ALREADY_EXISTS("1003","Username already exists"),
+    REFRESH_TOKEN_IS_NOT_FOUND("1004","Refresh token not found"),
+    REFRESH_TOKEN_IS_ALREADY_EXPIRED("1005","Refresh token is already expired"),
+    USERNAME_OR_PASSWORD_IS_INVALID("1006","Username or password is invalid"),
+    TOKEN_IS_EXPIRED("1007","The token is expired"),
+    GENERAL_EXCEPTION("9999","The general error.");
 
     private String code;
     private String message;

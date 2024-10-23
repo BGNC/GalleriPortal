@@ -9,10 +9,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ErrorMessage {
+public class ErrorMessage<T> {
 
     private MessageType messageType;
     private String ofStatic;
+
 
     public String prepareMessage() {
         StringBuilder builder = new StringBuilder();
@@ -20,6 +21,7 @@ public class ErrorMessage {
         builder.append(messageType.getMessage());
         if (ofStatic != null) {
             builder.append(" : ")
+
                     .append(ofStatic);
         }
         return builder.toString();
