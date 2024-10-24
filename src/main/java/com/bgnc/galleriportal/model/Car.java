@@ -16,7 +16,6 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
 public class Car extends BaseEntity{
 
     @Column(name = "plaka",nullable = false)
