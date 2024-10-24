@@ -5,6 +5,7 @@ import com.bgnc.galleriportal.dto.AccountResponse;
 import com.bgnc.galleriportal.enums.CurrencyType;
 import com.bgnc.galleriportal.model.Account;
 import com.bgnc.galleriportal.repository.AccountRepository;
+import com.bgnc.galleriportal.service.IAccountService;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
@@ -27,7 +28,7 @@ class AccountServiceImplTest {
     private AccountRepository accountRepository;
 
     @InjectMocks
-    private AccountServiceImpl accountService;
+    private IAccountService accountService;
 
     private Validator validator;
 
