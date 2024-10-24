@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Builder
+
 public class SaledCar extends BaseEntity {
 
     @ManyToOne

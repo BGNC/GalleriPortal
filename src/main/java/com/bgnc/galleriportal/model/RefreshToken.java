@@ -17,7 +17,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Builder
+
 public class RefreshToken extends BaseEntity {
     @Column(name = "refresh_token")
     private String refreshToken;

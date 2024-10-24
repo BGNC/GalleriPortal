@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Builder
+
 public class Address extends BaseEntity{
 
     @Column(name = "street",nullable = false)

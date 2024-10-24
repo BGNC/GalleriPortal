@@ -17,7 +17,6 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Builder
 public class Account extends BaseEntity {
 
     @NotBlank(message = "Account number cannot be blank")
