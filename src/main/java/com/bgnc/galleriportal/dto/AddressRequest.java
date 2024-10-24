@@ -1,6 +1,5 @@
 package com.bgnc.galleriportal.dto;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -22,14 +21,11 @@ public class AddressRequest {
     @Size(max = 50, message = "District must not exceed 50 characters")
     private String district;
 
-
-
     @NotEmpty(message = "City field is required")
     @Size(max = 50, message = "City must not exceed 50 characters")
     private String city;
 
-
-    @NotEmpty(message = "Neighboord field is required")
+    @NotEmpty(message = "Neighborhood field is required")
     @Size(max = 50, message = "Neighborhood must not exceed 50 characters")
     private String neighborhood;
 }

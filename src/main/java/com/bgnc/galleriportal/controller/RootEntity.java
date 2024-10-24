@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-
 public class RootEntity<T> {
     private T data;
     private String errorMessage;
