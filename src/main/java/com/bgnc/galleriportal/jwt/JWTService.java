@@ -4,7 +4,6 @@ import java.security.Key;
 import java.util.Date;
 import java.util.function.Function;
 
-import javax.crypto.SecretKey;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
@@ -24,7 +23,7 @@ public class JWTService {
         return Jwts.builder()
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 1000*60*60*2))
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 2))
                 .signWith(getKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
