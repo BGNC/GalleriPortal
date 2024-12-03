@@ -18,7 +18,7 @@ public class AddressServiceImpl implements IAddressService {
 
     private final AddressRepository addressRepository;
 
-    private Address createAddress(AddressRequest addressRequest){
+    public Address createAddress(AddressRequest addressRequest){
         Address address = new Address();
         address.setCreateTime(new Date());
         BeanUtils.copyProperties(addressRequest, address);
