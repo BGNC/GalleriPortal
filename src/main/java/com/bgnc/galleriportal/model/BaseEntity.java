@@ -19,4 +19,6 @@ public class BaseEntity {
     @Column(nullable = false, updatable = false,name = "create_time")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Date createTime;
+
+
 }
