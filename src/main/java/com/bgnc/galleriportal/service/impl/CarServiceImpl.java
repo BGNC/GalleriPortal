@@ -4,18 +4,23 @@ import com.bgnc.galleriportal.dto.CarRequest;
 import com.bgnc.galleriportal.dto.CarResponse;
 import com.bgnc.galleriportal.model.Car;
 import com.bgnc.galleriportal.repository.CarRepository;
+import com.bgnc.galleriportal.repository.GenericRepository;
 import com.bgnc.galleriportal.service.ICarService;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
 @Service
-@RequiredArgsConstructor
-public class CarServiceImpl implements ICarService {
+public class CarServiceImpl extends GenericServiceImpl<Car,Long> implements ICarService  {
 
-    private final CarRepository carRepository;
+
+
+    public CarServiceImpl(GenericRepository<Car,Long> carRepository) {
+        super(carRepository);
+
+    }
 
     private Car createCar(CarRequest carRequest){
         Car car = new Car();
@@ -25,13 +30,17 @@ public class CarServiceImpl implements ICarService {
         return car;
 
     }
+
+
+
     @Override
     public CarResponse saveCar(CarRequest carRequest) {
 
         CarResponse carResponse = new CarResponse();
-        Car car = carRepository.save(createCar(carRequest));
+        Car car = save(createCar(carRequest));
         BeanUtils.copyProperties(car, carResponse);
-
         return carResponse;
     }
+
+
 }
