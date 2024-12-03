@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class AccountRequest {
+
     @NotBlank(message = "Account number cannot be blank")
     private String accountNo;
 
