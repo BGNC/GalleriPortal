@@ -29,6 +29,7 @@ public class User extends BaseEntity implements UserDetails {
     @NotEmpty(message = "Kullanıcı Adınızı Boş Geçmeyiniz")
     private String username;
 
+
     @Column(name = "password", nullable = false)
     @NotEmpty(message = "Şifre alanınızı  boş geçmeyiniz")
     private String password;
